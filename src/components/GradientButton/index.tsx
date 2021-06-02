@@ -1,5 +1,7 @@
 import { Button, Text } from "./styles";
 
+import ClipLoader from "react-spinners/ClipLoader";
+
 type ButtonProps = {
   onClick: () => void;
   loading: boolean;
@@ -8,7 +10,11 @@ type ButtonProps = {
 export function GradientButton(props: ButtonProps) {
   return (
     <Button {...props}>
-      {props.loading ? <Text>CARREGANDO</Text> : <Text>ENTRAR</Text>}
+      {props.loading ? (
+        <ClipLoader color={"#fff"} loading={props.loading} size={20} />
+      ) : (
+        <Text>ENTRAR</Text>
+      )}
     </Button>
   );
 }
