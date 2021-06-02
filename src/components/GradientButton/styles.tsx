@@ -12,7 +12,7 @@ export const Button = styled.button`
   margin-bottom: 25px;
 
   @media (max-width: 450px) {
-    margin-bottom: -30px;
+    margin-bottom: -33px;
 
     width: 168px;
     box-shadow: none;

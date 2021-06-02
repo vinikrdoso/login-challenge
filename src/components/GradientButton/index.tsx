@@ -1,12 +1,12 @@
 import { Button, Text } from "./styles";
 
-type InputProps = {
-  type: string;
+type ButtonProps = {
+  onClick: () => void;
 };
 
-export function GradientButton({ type }: InputProps) {
+export function GradientButton(props: ButtonProps) {
   return (
-    <Button>
+    <Button {...props}>
       <Text>ENTRAR</Text>
     </Button>
   );

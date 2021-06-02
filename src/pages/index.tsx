@@ -1,8 +1,19 @@
 import SignInTemplate from "../templates/SignIn";
 
-export default function Home() {
-  const handleSubmit = () => {
-    console.log("opa");
+// import { connect } from "react-redux";
+
+// import { loginUserAction } from "../store/sagas/login";
+
+function Home() {
+  const handleSubmit = (email, password) => {
+    console.log("email, password", email, password);
   };
+
   return <SignInTemplate onSubmit={handleSubmit} />;
 }
+
+// const mapStateToProps = (response) => ({
+//   response,
+// });
+
+export default Home;

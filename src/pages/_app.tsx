@@ -1,9 +1,15 @@
 import "../styles/global.scss";
+import { Provider } from "react-redux";
+
+// import configureStore from "../store";
 
 import { Wrapper, ImgContainer, Overlay, Img } from "../styles";
 
 function MyApp({ Component, pageProps }) {
+  // const store = configureStore();
+  // console.log(store);
   return (
+    // <Provider store={store}>
     <Wrapper>
       <ImgContainer>
         <Overlay />
@@ -13,6 +19,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
     </Wrapper>
+    // </Provider>
   );
 }
 
