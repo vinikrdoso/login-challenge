@@ -15,7 +15,7 @@ import {
   ForgotPasswordContainer,
 } from "./styles";
 
-export default function Home({ onSubmit }) {
+export default function Home({ onSubmit, loading }) {
   const [emailErrMsg, setEmailErrMsg] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -60,7 +60,7 @@ export default function Home({ onSubmit }) {
           errorMsg={passwordErrMsg}
         />
 
-        <GradientButton onClick={handleFormValidate} />
+        <GradientButton onClick={handleFormValidate} loading={loading} />
       </Content>
       <ForgotPasswordContainer>
         <ForgotPasswordText>Esqueceu seu login ou senha?</ForgotPasswordText>
