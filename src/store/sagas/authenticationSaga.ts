@@ -4,6 +4,7 @@ import { loginUserService } from "../services/authenticationService";
 import * as types from "../actions";
 
 export function* loginSaga(payload) {
+  console.log("payload", payload);
   try {
     const response = yield call(loginUserService, payload);
     yield [put({ type: types.LOGIN_USER_SUCCESS, response })];

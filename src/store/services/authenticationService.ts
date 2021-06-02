@@ -1,19 +1,19 @@
-export const loginUserService = (request) => {
-  const LOGIN_API_ENDPOINT = "http://localhost:4000/api/v1/login";
+import { api } from "../../services/api";
 
-  const parameters = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(request.user),
-  };
+export const loginUserService = async (request) => {
+  const params = request.user;
 
-  return fetch(LOGIN_API_ENDPOINT, parameters)
-    .then((response) => {
-      return response.json();
-    })
-    .then((json) => {
-      return json;
+  try {
+    const { data } = await api.get("signin", {
+      params,
     });
+    console.log("loginUserService response", data);
+    if (data.length > 0) {
+      //return sucesso
+    } else {
+      //return erro
+    }
+  } catch (error) {
+    //return erro
+  }
 };
