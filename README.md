@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Wiser Login Challenge
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -12,23 +12,79 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Production environment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Open [https://wiser-login-challenge.vercel.app/](https://wiser-login-challenge.vercel.app/) to navigate.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This app is a login screen, you need to put your e-mail and password credentials to get logged in.
 
-## Learn More
+There are two responses for this request, a success response and an error response,
+the success response is set when both credentials are correct, the correct credentials are listed below:
 
-To learn more about Next.js, take a look at the following resources:
+```
+  {
+    username: "wiser@mail.com",
+    password: "123456",
+  },
+  {
+    username: "vini@mail.com",
+    password: "654321",
+  }
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Anything different from that will return invalid credentials message. Both success and failure will be displayed as an alert.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Structure
 
-## Deploy on Vercel
+This project is set with the following structure:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src
+└── components
+    ├── component
+    │   ├── index.tsx
+    │   └── styles.tsx
+    │
+    ├── pages
+    │   ├── page
+    │   │   └── index.tsx
+    │   │
+    │   ├── _app.tsx
+    │   ├── _document.tsx
+    │   └── index.tsx
+    │
+    ├── services
+    │   └── service.ts
+    │
+    ├── store
+    │   ├── actions
+    │   │   ├── action.ts
+    │   │   └── index.ts
+    │   │
+    │   ├── reducers
+    │   │   ├── index.ts
+    │   │   └── reducer.ts
+    │   │
+    │   ├── sagas
+    │   │   ├── index.ts
+    │   │   ├── saga.ts
+    │   │   └── watcher.ts
+    │   │
+    │   └── configureStore.ts
+    │
+    ├── styles
+    │   ├── global.scss
+    │   └── index.tsx
+    │
+    └── templates
+        └── template
+            ├── index.tsx
+            └── styles.tsx
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact
+
+👤 **Vinícius Cardoso Junqueira**
+
+- Github: [@gabrielgrs](https://github.com/vinikrdoso)
+- LinkedIn: [@gabrielgrs](https://www.linkedin.com/in/viniciuscardosojunqueira/)

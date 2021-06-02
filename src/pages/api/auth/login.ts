@@ -1,13 +1,13 @@
 const MOCKED_USERS = [
   {
-    username: "vini@mail.com",
+    username: "wiser@mail.com",
     password: "123456",
-    name: "Vini",
+    name: "Wiser",
   },
   {
-    username: "test@mail.com",
+    username: "vini@mail.com",
     password: "654321",
-    name: "Teste",
+    name: "Vini",
   },
 ];
 
