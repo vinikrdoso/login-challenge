@@ -7,7 +7,7 @@ type ButtonProps = {
 export function GradientButton(props: ButtonProps) {
   return (
     <Button {...props}>
-      <Text>ENTRAR</Text>
+      <Text>ENTRARr</Text>
     </Button>
   );
 }
