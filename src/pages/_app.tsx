@@ -1,25 +1,24 @@
 import "../styles/global.scss";
 import { Provider } from "react-redux";
 
-// import configureStore from "../store";
+import configureStore from "../store/configureStore";
 
 import { Wrapper, ImgContainer, Overlay, Img } from "../styles";
 
 function MyApp({ Component, pageProps }) {
-  // const store = configureStore();
-  // console.log(store);
+  const store = configureStore();
   return (
-    // <Provider store={store}>
-    <Wrapper>
-      <ImgContainer>
-        <Overlay />
-        <Img />
-      </ImgContainer>
-      <main>
-        <Component {...pageProps} />
-      </main>
-    </Wrapper>
-    // </Provider>
+    <Provider store={store}>
+      <Wrapper>
+        <ImgContainer>
+          <Overlay />
+          <Img />
+        </ImgContainer>
+        <main>
+          <Component {...pageProps} />
+        </main>
+      </Wrapper>
+    </Provider>
   );
 }
 

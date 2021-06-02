@@ -33,7 +33,7 @@ export default function Home({ onSubmit }) {
       return;
     }
 
-    onSubmit(email, password);
+    onSubmit({ email, password });
   };
 
   return (

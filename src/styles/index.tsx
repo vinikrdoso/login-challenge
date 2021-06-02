@@ -8,12 +8,14 @@ export const Wrapper = styled.div`
   align-items: center;
 
   main {
+    padding-left: 112px;
+
     flex: 1;
     z-index: 9;
-    padding-left: 112px;
 
     @media (max-width: 1024px) {
       padding-left: 0;
+
       display: flex;
       justify-content: center;
     }
@@ -54,6 +56,7 @@ export const Overlay = styled.div`
   left: 0;
   right: 0;
   z-index: 2;
+
   background: linear-gradient(360deg, #130525 0%, rgba(105, 57, 153, 0) 100%);
 
   @media (max-width: 450px) {

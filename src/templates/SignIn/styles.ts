@@ -16,41 +16,48 @@ export const Content = styled.div`
   flex-direction: column;
 
   @media (max-width: 450px) {
+    padding: 10px;
+
+    border-radius: 8px;
+    background: #faf5ff;
+
     display: flex;
     justify-content: center;
-    padding: 10px;
-    background: #faf5ff;
-    border-radius: 8px;
   }
 `;
 
 export const WelcomeText = styled.span`
+  margin-bottom: 20px;
+
   font-weight: 400;
   font-size: 40px;
   line-height: 48px;
   color: #383e71;
 
-  margin-bottom: 20px;
-
   @media (max-width: 450px) {
-    font-size: 24px;
-    color: #383e71;
+    width: 50%;
     margin-bottom: 16px;
+
+    font-size: 24px;
+    font-style: normal;
+    text-align: center;
+    line-height: 35px;
+    color: #383e71;
   }
 `;
 
 export const InstructionText = styled.span`
+  margin-bottom: 40px;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-
   color: #989fdb;
 
-  margin-bottom: 40px;
-
   @media (max-width: 450px) {
-    font-size: 12px;
     margin-bottom: 20px;
+
+    font-size: 12px;
   }
 `;
 
@@ -68,18 +75,18 @@ export const ForgotPasswordContainer = styled.div`
 export const ForgotPasswordText = styled.span`
   font-size: 14px;
   line-height: 20px;
-
   text-align: center;
-
   color: #989fdb;
+
   @media (max-width: 450px) {
     font-size: 12px;
-    align-items: center;
     color: #ffffff;
 
+    align-items: center;
+
     a {
-      color: #ffffff;
       font-weight: 400;
+      color: #ffffff;
     }
   }
 `;

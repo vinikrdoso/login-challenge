@@ -14,7 +14,6 @@ type InputProps = {
 };
 
 export function LoginInput({ type, onChange, errorMsg }: InputProps) {
-  console.log("LoginInput", onChange, errorMsg);
   return (
     <InputContainer>
       <Label>{type}</Label>
