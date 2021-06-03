@@ -9,7 +9,7 @@ type ButtonProps = {
 
 export function GradientButton(props: ButtonProps) {
   return (
-    <Button {...props}>
+    <Button onClick={props.onClick}>
       {props.loading ? (
         <ClipLoader color={"#fff"} loading={props.loading} size={20} />
       ) : (

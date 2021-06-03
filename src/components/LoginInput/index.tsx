@@ -16,12 +16,13 @@ type InputProps = {
 export function LoginInput({ type, onChange, errorMsg }: InputProps) {
   return (
     <InputContainer>
-      <Label>{type}</Label>
+      <Label htmlFor={type}>{type}</Label>
       <InputWrapper errorMsg={errorMsg}>
         <InternalInput
           type={type === "senha" ? "password" : "email"}
           errorMsg={errorMsg}
           onChange={(e) => onChange(e)}
+          id={type}
         />
         {errorMsg && <ErrorIcon>x</ErrorIcon>}
       </InputWrapper>
