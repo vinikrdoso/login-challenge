@@ -82,9 +82,21 @@ src
             └── styles.tsx
 ```
 
+## Functionalities
+
+I chose to make the API inside the project as a page route because I had more freedom
+to customize the response, I tried to use MockApi, Mockable, Designer.Mocky and even JSON Server,
+but none of them let me work freely as I wanted. But the flow is working perfectly!
+
+I separated the pages and templates to let the pages handle the data flow and handling,
+and the templates handle only render.
+
+The company that I work nowadays uses the duck pattern with redux, I tried a different
+approach so I can see another way to use Redux.
+
 ## Contact
 
 👤 **Vinícius Cardoso Junqueira**
 
-- Github: [@gabrielgrs](https://github.com/vinikrdoso)
-- LinkedIn: [@gabrielgrs](https://www.linkedin.com/in/viniciuscardosojunqueira/)
+- Github: [@vinikrdoso](https://github.com/vinikrdoso)
+- LinkedIn: [@viniciuscardosojunqueira](https://www.linkedin.com/in/viniciuscardosojunqueira/)
