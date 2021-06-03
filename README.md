@@ -8,6 +8,13 @@ Run the development server:
 npm run dev
 # or
 yarn dev
+
+```
+
+To run tests:
+
+```bash
+yarn test
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
